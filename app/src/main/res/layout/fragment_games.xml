@@ -7,12 +7,10 @@
     android:background="@color/black"
     tools:context=".GamesFragment">
 
-    <TextView
-        android:id="@+id/text_view"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Meus Jogos"
-        android:textSize="60dp"
-        android:textColor="@color/white"
-        android:gravity="center"/>
+        android:background="#000000"
+        android:scrollbars="vertical"  />
 </FrameLayout>
