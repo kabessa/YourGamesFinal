@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/store_item"
+            android:icon="@drawable/ic_store"
+            android:title="Loja">
+        </item>
+
+        <item
+            android:id="@+id/favorite_item"
+            android:icon="@drawable/ic_favorite"
+            android:title="Favoritos">
+        </item>
+
+        <item
+            android:id="@+id/games_item"
+            android:icon="@drawable/ic_games"
+            android:title="Meus Jogos">
+        </item>
+    </group>
+</menu>
