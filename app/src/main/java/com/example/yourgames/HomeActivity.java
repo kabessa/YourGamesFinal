@@ -107,6 +107,10 @@ public class HomeActivity extends AppCompatActivity {
                     fragment = new GamesFragment();
                     toolbar.setTitle("Meus Jogos");
                 }
+                else if (itemId == R.id.add_item) {
+                    Intent intent = new Intent(HomeActivity.this,CadGames.class);
+                    startActivity(intent);
+                }
 
                 // Mostra uma mensagem Toast com o título do item do menu.
                 Toast.makeText(getApplicationContext(), menuItem.getTitle(), Toast.LENGTH_SHORT).show();

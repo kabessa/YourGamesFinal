@@ -139,6 +139,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         // Iniciar FirebaseAuth para cadastrar o usuário.
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
 

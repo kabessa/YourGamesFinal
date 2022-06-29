@@ -21,5 +21,10 @@
             android:icon="@drawable/ic_games"
             android:title="Meus Jogos">
         </item>
+        <item
+            android:id="@+id/add_item"
+            android:icon="@drawable/ic_games"
+            android:title="Cadastrar Jogos">
+        </item>
     </group>
 </menu>
