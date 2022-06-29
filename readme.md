@@ -1,0 +1,1 @@
+Este é um aplicativo para dispositíveis móveis mais em específio Android
