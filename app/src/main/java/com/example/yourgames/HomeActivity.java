@@ -61,8 +61,7 @@ public class HomeActivity extends AppCompatActivity {
         // Condições que especificam o que cada item ao ser clicado deve fazer.
         if (id == R.id.action_account) {
 
-            // Mostrando uma mensagem pro usuário e o redirecionando para tela.
-            Toast.makeText(this, "Usuário", Toast.LENGTH_SHORT).show();
+            // Redirecionando o usuário para a tela UserActivity.
             Intent intent = new Intent(HomeActivity.this, UserActivity.class);
             startActivity(intent);
             return true;
@@ -112,15 +111,12 @@ public class HomeActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
 
-                // Mostra uma mensagem Toast com o título do item do menu.
-                Toast.makeText(getApplicationContext(), menuItem.getTitle(), Toast.LENGTH_SHORT).show();
-
                 // Parte responsável por exibir um FrameLayout caso não haja nenhum fragmento selecionado.
                 if (fragment != null) {
                     FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
                     // Substitui um Fragmento por FrameLayout e comita as alterações.
-                    transaction.replace(R.id.frame_layout, fragment);
+                    transaction.replace(R.id.constraint_layout, fragment);
                     transaction.commit();
 
                     // Fecha todas as DrawerViews abertas.
