@@ -107,6 +107,7 @@ public class HomeActivity extends AppCompatActivity {
                     toolbar.setTitle("Meus Jogos");
                 }
                 else if (itemId == R.id.add_item) {
+
                     Intent intent = new Intent(HomeActivity.this,CadGames.class);
                     startActivity(intent);
                 }

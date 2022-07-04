@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewFav"
+    android:layout_width="200sp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10sp"
+    android:orientation="vertical"
+    >
+
+
+    <TextView
+        android:id="@+id/textViewFavorite"
+        android:layout_width="190sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:background="@color/blue_500"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        tools:text="Ark Survival Evolved" />
+
+    <ImageView
+        android:id="@+id/imageFavoriteView"
+        android:layout_width="190sp"
+        android:layout_height="133sp"
+
+        android:background="#090808"
+        tools:srcCompat="@drawable/arkimage" />
+
+    <LinearLayout
+        android:layout_width="190sp"
+        android:layout_height="44dp"
+
+
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonCompFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#673AB7"
+            android:text="Comprar R$ 250,00"
+            android:textSize="10dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/unFavorite"
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/ic_baseline_unfavorite"
+            android:backgroundTint="@color/blue_500"
+            android:backgroundTintMode="screen"
+            android:textAlignment="center"
+            app:icon="@drawable/ic_baseline_unfavorite"
+            app:iconGravity="start"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+</LinearLayout>

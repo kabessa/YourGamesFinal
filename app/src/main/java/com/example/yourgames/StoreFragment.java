@@ -8,12 +8,20 @@ import android.widget.AdapterView;
 
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.yourgames.databinding.FragmentGamesBinding;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
 
 
 import java.util.ArrayList;
@@ -22,61 +30,53 @@ public class StoreFragment extends Fragment {
 
     private AdapterView.OnItemClickListener listener;
     private RecyclerView recyclerView;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
     RecyclerView.LayoutManager layoutManager;
     RecycleViewAdapter recycleViewAdapter;
-    ArrayList<Integer>icons = new ArrayList<>();
+    ArrayList<String>icons = new ArrayList<>();
     ArrayList<String>names = new ArrayList<>();
     ArrayList<String>precos = new ArrayList<>();
-
+    ArrayList<String>desc = new ArrayList<>();
+    ArrayList<String>urlLoja = new ArrayList<>();
+    String user_ID;
     private FragmentGamesBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = LayoutInflater.from(getContext()).inflate(R.layout.fragment_games,container,false);
+        user_ID = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-        icons.add(R.drawable.arkimage);
-        icons.add(R.drawable.miranhaimg);
-        icons.add(R.drawable.r2image);
-        icons.add(R.drawable.thelastimg);
-        icons.add(R.drawable.dmcimag);
 
-        names.add("ARK: Survival Evolved");
-        names.add("Homem-Aranha");
-        names.add("Resident Evil 2");
-        names.add("The Last of Us");
-        names.add("Devil May Cry 5");
+        // Realizar a busca de dados na coleção Loja
+         db.collection("Loja").addSnapshotListener(new EventListener<QuerySnapshot>() {
+            @Override
+            public void onEvent(@Nullable QuerySnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
 
-        precos.add("Comprar R$ 250,00");
-        precos.add("Comprar R$ 250,00");
-        precos.add("Comprar R$ 250,00");
-        precos.add("Comprar R$ 250,00");
-        precos.add("Comprar R$ 250,00");
+                // Realizando verificações.
+                if (documentSnapshot != null) {
+                    names.clear();
+                    precos.clear();
+                    icons.clear();
+                    desc.clear();
+                    urlLoja.clear();
+                    for(DocumentSnapshot snapshot : documentSnapshot){
 
-        icons.add(R.drawable.arkimage);
-        icons.add(R.drawable.miranhaimg);
-        icons.add(R.drawable.r2image);
-        icons.add(R.drawable.thelastimg);
-        icons.add(R.drawable.dmcimag);
+                        names.add(snapshot.getString("Nome"));
+                        precos.add("Comprar R$ "+snapshot.getString("Preco"));
+                        icons.add(snapshot.getString("Url"));
+                        desc.add(snapshot.getString("Descrição"));
+                        urlLoja.add(snapshot.getString("Url Loja"));
+                    }
+                    recyclerView = root.findViewById(R.id.recycler_view);
+                    layoutManager = new GridLayoutManager(StoreFragment.this.getContext(),2);
+                    recyclerView.setLayoutManager(layoutManager);
+                    recycleViewAdapter = new RecycleViewAdapter(2,icons,names,precos,desc,urlLoja);
+                    recyclerView.setAdapter(recycleViewAdapter);
 
-        names.add("ARK: Survival Evolved");
-        names.add("Homem-Aranha");
-        names.add("Resident Evil 2");
-        names.add("The Last of Us");
-        names.add("Devil May Cry 5");
-
-        precos.add("Comprar R$ 250,00");
-        precos.add("Comprar R$ 250,00");
-        precos.add("Comprar R$ 250,00");
-        precos.add("Comprar R$ 250,00");
-        precos.add("Comprar R$ 250,00");
-
-        recyclerView = root.findViewById(R.id.recycler_view);
-        layoutManager = new GridLayoutManager(this.getContext(),2);
-        recyclerView.setLayoutManager(layoutManager);
-        recycleViewAdapter = new RecycleViewAdapter(icons,names,precos,this);
-        recyclerView.setAdapter(recycleViewAdapter);
-        recyclerView.setHasFixedSize(true);
+                }
+            }
+        });
 
         return root;
     }

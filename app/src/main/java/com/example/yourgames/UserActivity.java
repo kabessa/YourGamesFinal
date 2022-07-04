@@ -40,6 +40,7 @@ public class UserActivity extends AppCompatActivity {
     // Inicializando o banco de dados Firestore.
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     String user_ID;
+    String jogo_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

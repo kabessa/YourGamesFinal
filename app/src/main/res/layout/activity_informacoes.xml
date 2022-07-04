@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
+    android:background="#000000"
     tools:context=".Informacoes">
 
 
@@ -22,14 +23,15 @@
             android:layout_gravity="start"
             android:fitsSystemWindows="true"
 
-        />
+            />
 
     </androidx.drawerlayout.widget.DrawerLayout>
 
     <ImageView
         android:id="@+id/imageGame"
-        android:layout_width="408dp"
+        android:layout_width="match_parent"
         android:layout_height="240dp"
+        android:background="@color/blue_500"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -37,18 +39,24 @@
 
     <TextView
         android:id="@+id/textTitle"
-        android:layout_width="406dp"
-        android:layout_height="45dp"
+        android:layout_width="417dp"
+        android:layout_height="40dp"
+        android:background="@color/blue_500"
         android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="@+id/drawerLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageGame" />
 
     <TextView
-        android:id="@+id/texDescrição"
-        android:layout_width="408dp"
-        android:layout_height="72dp"
+        android:id="@+id/texDescricao"
+        android:layout_width="407dp"
+        android:layout_height="234dp"
+        android:background="#FFFFFF"
         android:text="TextView"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/drawerLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textTitle" />
@@ -58,9 +66,10 @@
         android:layout_width="406dp"
         android:layout_height="86dp"
         android:text="TextView"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texDescrição" />
+        app:layout_constraintTop_toBottomOf="@+id/texDescricao" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
