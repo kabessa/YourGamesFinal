@@ -52,6 +52,7 @@ public class GamesFragment extends Fragment  {
     ArrayList<String>names = new ArrayList<>();
     ArrayList<String>precos = new ArrayList<>();
     ArrayList<String>desc = new ArrayList<>();
+    ArrayList<String>userId = new ArrayList<>();
     ArrayList<String>urlLoja = new ArrayList<>();
     String user_ID;
 
@@ -86,6 +87,7 @@ public class GamesFragment extends Fragment  {
                     icons.clear();
                     desc.clear();
                     urlLoja.clear();
+                    userId.clear();
                     for(DocumentSnapshot snapshot : documentSnapshot){
 
                        names.add(snapshot.getString("Nome"));
@@ -93,11 +95,12 @@ public class GamesFragment extends Fragment  {
                        icons.add(snapshot.getString("Url"));
                        desc.add(snapshot.getString("Descrição"));
                        urlLoja.add(snapshot.getString("Url Loja"));
+                        userId.add(snapshot.getString("autor_id"));
                     }
                      recyclerView = root.findViewById(R.id.recycler_view);
                     layoutManager = new GridLayoutManager(GamesFragment.this.getContext(),2);
                     recyclerView.setLayoutManager(layoutManager);
-                    recycleViewAdapter = new RecycleViewAdapter(2,icons,names,precos,desc,urlLoja);
+                    recycleViewAdapter = new RecycleViewAdapter(2,icons,names,precos,desc,urlLoja,userId);
                     recyclerView.setAdapter(recycleViewAdapter);
 
                 }

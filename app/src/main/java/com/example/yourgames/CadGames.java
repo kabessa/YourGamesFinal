@@ -41,7 +41,6 @@ public class CadGames extends AppCompatActivity {
     private EditText game_name;
     private EditText price_name;
     private EditText desc_name;
-
     private EditText urlText;
     private EditText desenv_name;
     private Button button_cad;
@@ -160,7 +159,7 @@ public class CadGames extends AppCompatActivity {
 
                         // Inicializando Firestore.
                         FirebaseFirestore db = FirebaseFirestore.getInstance();
-
+                        user_ID = FirebaseAuth.getInstance().getCurrentUser().getUid();
                         // Criando um Map para adicionar os dados do jogo.
                         Map<String, Object> game = new HashMap<>();
                         game.put("Nome", name);
@@ -168,13 +167,14 @@ public class CadGames extends AppCompatActivity {
                         game.put("Descrição", desc);
                         game.put("Url Loja",urlLoja);
                         game.put("Url",url);
+                        game.put("autor_id",user_ID);
 
 
 
 
-                        // busca o id do Usuário que está cadastrando.
-                        user_ID = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                        db.collection("Loja").document(user_ID).collection("Jogos").document(name).set(game);
+
+                        //Adicionando o jogo a Loja
+                        db.collection("Loja").document(name).set(game);
                         // Criando/ Buscndo uma coleção de usuários.
                         DocumentReference documentReference = db.collection("Usuários").document(user_ID);
 
@@ -183,7 +183,7 @@ public class CadGames extends AppCompatActivity {
                             public void onSuccess(Void unused)
                             {
                                 Log.d("db_successful", "Dados salvos com sucesso");
-                                //Adicionando o jogo a Loja
+
                             }
                              }).addOnFailureListener(new OnFailureListener()
                         {

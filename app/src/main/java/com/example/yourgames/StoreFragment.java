@@ -38,6 +38,7 @@ public class StoreFragment extends Fragment {
     ArrayList<String>precos = new ArrayList<>();
     ArrayList<String>desc = new ArrayList<>();
     ArrayList<String>urlLoja = new ArrayList<>();
+    ArrayList<String>userId = new ArrayList<>();
     String user_ID;
     private FragmentGamesBinding binding;
 
@@ -49,7 +50,7 @@ public class StoreFragment extends Fragment {
 
 
         // Realizar a busca de dados na coleção Loja
-         db.collection("Loja").addSnapshotListener(new EventListener<QuerySnapshot>() {
+        db.collection("Loja").addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(@Nullable QuerySnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
 
@@ -60,6 +61,7 @@ public class StoreFragment extends Fragment {
                     icons.clear();
                     desc.clear();
                     urlLoja.clear();
+                    userId.clear();
                     for(DocumentSnapshot snapshot : documentSnapshot){
 
                         names.add(snapshot.getString("Nome"));
@@ -67,11 +69,12 @@ public class StoreFragment extends Fragment {
                         icons.add(snapshot.getString("Url"));
                         desc.add(snapshot.getString("Descrição"));
                         urlLoja.add(snapshot.getString("Url Loja"));
+                        userId.add(snapshot.getString("autor_id"));
                     }
                     recyclerView = root.findViewById(R.id.recycler_view);
                     layoutManager = new GridLayoutManager(StoreFragment.this.getContext(),2);
                     recyclerView.setLayoutManager(layoutManager);
-                    recycleViewAdapter = new RecycleViewAdapter(2,icons,names,precos,desc,urlLoja);
+                    recycleViewAdapter = new RecycleViewAdapter(3,icons,names,precos,desc,urlLoja,userId);
                     recyclerView.setAdapter(recycleViewAdapter);
 
                 }

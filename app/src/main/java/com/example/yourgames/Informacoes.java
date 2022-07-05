@@ -9,9 +9,14 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,8 +35,9 @@ import java.util.ArrayList;
 
 
 public class Informacoes extends AppCompatActivity {
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
-    ArrayList<String> names = new ArrayList<>();
+
+
+
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,16 +46,35 @@ public class Informacoes extends AppCompatActivity {
 
 
         ImageView img = findViewById(R.id.imageGame);
-
-        TextView text = findViewById(R.id.textTitle);
+        TextView titleT = findViewById(R.id.textTitle);
         TextView textDesc = findViewById(R.id.texDescricao);
-
+        TextView txtAutor = findViewById(R.id.textAutor);
+        Button comprar = findViewById(R.id.buttonComprarInf);
+        String url;
 
         String title = getIntent().getStringExtra("title");
+        url = getIntent().getStringExtra("url");
+        String desc = getIntent().getStringExtra("desc");
+        String price = getIntent().getStringExtra("price");
         String imgVal = getIntent().getStringExtra("image");
+        String userName = getIntent().getStringExtra("userID");
+
 
         Glide.with(this).load(imgVal).into(img);
-        text.setText(title);
+        titleT.setText(title);
+        txtAutor.setText(userName);
+        textDesc.setText(desc);
+
+        comprar.setText(price);
+        comprar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
+            }
+        });
+
 
 
     }

@@ -39,6 +39,7 @@ public class FavoriteFragment extends Fragment {
     ArrayList<String>precos = new ArrayList<>();
     ArrayList<String>desc = new ArrayList<>();
     ArrayList<String>urlLoja = new ArrayList<>();
+    ArrayList<String>userId = new ArrayList<>();
     String user_ID;
 
     private FragmentGamesBinding binding;
@@ -64,6 +65,7 @@ public class FavoriteFragment extends Fragment {
                     icons.clear();
                     desc.clear();
                     urlLoja.clear();
+                    userId.clear();
                     for(DocumentSnapshot snapshot : documentSnapshot){
 
                         names.add(snapshot.getString("Nome"));
@@ -71,11 +73,12 @@ public class FavoriteFragment extends Fragment {
                         icons.add(snapshot.getString("Url"));
                         desc.add(snapshot.getString("Descrição"));
                         urlLoja.add(snapshot.getString("Url Loja"));
+                        userId.add(snapshot.getString("autor_id"));
                     }
                     recyclerView = root.findViewById(R.id.recycler_viewFavorite);
                     layoutManager = new GridLayoutManager(FavoriteFragment.this.getContext(),2);
                     recyclerView.setLayoutManager(layoutManager);
-                    recycleViewAdapter = new RecycleViewAdapter(1,icons,names,precos,desc,urlLoja);
+                    recycleViewAdapter = new RecycleViewAdapter(1,icons,names,precos,desc,urlLoja,userId);
 
                     recyclerView.setAdapter(recycleViewAdapter);
 
