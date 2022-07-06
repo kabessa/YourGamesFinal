@@ -75,14 +75,14 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
             public void onClick(View view) {
                 String  user_ID = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-                DocumentReference documentReference = db.collection("Usuários").document(user_ID);
+                DocumentReference documentReference = db.collection("Usuários").document(userID.get(position)).collection("Informações").document("Empresa");
                 documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
                     @Override
                     public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
 
                         if(id ==2)
                         {
-                            userName = documentSnapshot.getString("Nome");
+                            userName = documentSnapshot.getString("Empresa");
                             Intent intent = new Intent(holder.textView.getContext(), DeleteGame.class);
                             intent.putExtra("image", images.get(position));
                             intent.putExtra("title", names.get(position));
@@ -94,7 +94,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
 
                         }else
                         {
-                            userName = documentSnapshot.getString("Nome");
+                            userName = documentSnapshot.getString("Empresa");
                             Intent intent = new Intent(holder.textView.getContext(), Informacoes.class);
                             intent.putExtra("image", images.get(position));
                             intent.putExtra("title", names.get(position));
