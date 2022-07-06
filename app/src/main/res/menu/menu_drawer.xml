@@ -15,13 +15,22 @@
         <item
             android:id="@+id/favorite_item"
             android:icon="@drawable/ic_favorite"
+
             android:title="Favoritos">
         </item>
+
 
         <item
             android:id="@+id/games_item"
             android:icon="@drawable/ic_games"
             android:title="Meus Jogos">
+        </item>
+
+
+        <item
+            android:id="@+id/add_item"
+            android:icon="@drawable/ic_games"
+            android:title="Cadastrar Jogos">
         </item>
     </group>
 </menu>

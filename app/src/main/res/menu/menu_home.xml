@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+
         android:id="@+id/action_service"
         android:title="Service"
         android:icon="@drawable/ic_service"
@@ -11,11 +12,13 @@
     </item>
 
     <item
+
         android:id="@+id/action_account"
         android:title="Account"
         android:icon="@drawable/ic_account"
         app:showAsAction="ifRoom">
     </item>
+
 
     <item
         android:id="@+id/action_help"
@@ -23,4 +26,5 @@
         android:icon="@drawable/ic_help"
         app:showAsAction="ifRoom">
     </item>
+
 </menu>

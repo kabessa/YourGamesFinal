@@ -78,9 +78,10 @@ public class LoginActivity extends AppCompatActivity {
 
     // Conectando objetos a uma referência.
     private void StartComponents() {
+
         user_email = findViewById(R.id.user_email);
-        user_password = findViewById(R.id.user_password);
         button_login = findViewById(R.id.button_login);
+        user_password = findViewById(R.id.user_password);
         register_link = findViewById(R.id.register_link);
     }
 

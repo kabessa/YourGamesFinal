@@ -120,6 +120,11 @@ public class HomeActivity extends AppCompatActivity {
                     fragment = new GamesFragment();
                     toolbar.setTitle("Meus Jogos");
                 }
+                else if (itemId == R.id.add_item) {
+
+                    Intent intent = new Intent(HomeActivity.this,CadGames.class);
+                    startActivity(intent);
+                }
 
                 // Parte responsável por exibir um FrameLayout caso não haja nenhum fragmento selecionado.
                 if (fragment != null) {

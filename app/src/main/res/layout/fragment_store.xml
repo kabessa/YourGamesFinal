@@ -7,6 +7,7 @@
     android:background="@color/black"
     tools:context=".StoreFragment">
 
+
     <TextView
         android:id="@+id/text_view"
         android:layout_width="match_parent"
@@ -15,4 +16,12 @@
         android:textSize="60dp"
         android:textColor="@color/white"
         android:gravity="center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:scrollbars="vertical"  />
+
 </FrameLayout>

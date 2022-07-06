@@ -14,8 +14,24 @@
         android:theme="@style/Theme.YourGames"
         tools:targetApi="31">
         <activity
+
             android:name=".HelpActivity"
             android:exported="false" />
+        <activity
+
+            android:name=".EditGame"
+            android:exported="false" />
+        <activity
+            android:name=".DeleteGame"
+            android:exported="false" />
+        <activity
+            android:name=".CadGames"
+            android:exported="false" />
+        <activity
+            android:name=".Informacoes"
+            android:exported="false"
+            android:label="@string/title_activity_informacoes"
+            android:theme="@style/Theme.YourGames.NoActionBar" />
         <activity
             android:name=".SellerActivity"
             android:exported="false" />

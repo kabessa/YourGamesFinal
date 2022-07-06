@@ -19,6 +19,7 @@
 
         <ImageView
             android:id="@+id/top_detail"
+
             android:layout_width="320dp"
             android:layout_height="35dp"
             android:layout_marginBottom="35dp"
@@ -26,6 +27,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@id/dr_container"
             android:background="@drawable/style_design"/>
+
+            android:layout_width="360dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/dr_container"
+            android:background="@drawable/style_home"/>
+
 
         <View
             android:id="@+id/dr_container"
@@ -150,6 +160,7 @@
 
         <ImageView
             android:id="@+id/bottom_detail"
+
             android:layout_width="320dp"
             android:layout_height="35dp"
             android:rotation="180"
@@ -158,6 +169,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/dr_container"
             android:background="@drawable/style_design"/>
+
+            android:layout_width="360dp"
+            android:layout_height="40dp"
+            android:rotation="180"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dr_container"
+            android:background="@drawable/style_home"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

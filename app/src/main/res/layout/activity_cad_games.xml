@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="@dimen/vertical"
+    android:paddingHorizontal="@dimen/horizontal"
+    android:background="@color/black"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/top_detail"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/style_detail"/>
+
+    <View
+        android:id="@+id/dr_container"
+        android:layout_width="wrap_content"
+        android:layout_height="592dp"
+        android:background="@drawable/dr_container"
+        app:layout_constraintBottom_toTopOf="@id/bottom_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_detail" />
+
+    <Button
+        android:id="@+id/button_select_img"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_photo"
+
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/dr_container"
+        app:layout_constraintStart_toStartOf="@+id/dr_container"
+        app:layout_constraintTop_toTopOf="@+id/dr_container"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+
+
+        <ImageView
+            android:id="@+id/imageSelected"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="20dp"
+
+            app:layout_constraintEnd_toEndOf="@+id/dr_container"
+            app:layout_constraintStart_toStartOf="@+id/dr_container"
+            app:layout_constraintTop_toTopOf="@+id/dr_container"
+            app:srcCompat="@drawable/ic_photo" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/field_name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="Nome"
+        app:layout_constraintEnd_toEndOf="@id/dr_container"
+        app:layout_constraintStart_toStartOf="@id/dr_container"
+        app:layout_constraintTop_toBottomOf="@+id/imageSelected"
+        app:shapeAppearance="@style/field">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/game_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLength="40">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/field_desc"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="Desc"
+        app:layout_constraintEnd_toEndOf="@id/dr_container"
+        app:layout_constraintStart_toStartOf="@id/dr_container"
+        app:layout_constraintTop_toBottomOf="@+id/field_name"
+        app:shapeAppearance="@style/field">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/game_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="200">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/field_url"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="Url Game"
+        app:layout_constraintEnd_toEndOf="@id/dr_container"
+        app:layout_constraintStart_toStartOf="@id/dr_container"
+        app:layout_constraintTop_toBottomOf="@+id/field_desc"
+        app:shapeAppearance="@style/field">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/game_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="200">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/field_price"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="Preço"
+        app:layout_constraintEnd_toEndOf="@id/dr_container"
+        app:layout_constraintStart_toStartOf="@id/dr_container"
+        app:layout_constraintTop_toBottomOf="@+id/field_url"
+        app:shapeAppearance="@style/field">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/price_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:maxLength="20">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_cadastro"
+        style="@style/button"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/dr_button"
+        android:text="Cadastrar"
+        app:layout_constraintBottom_toBottomOf="@+id/dr_container"
+        app:layout_constraintEnd_toEndOf="@id/dr_container"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/dr_container" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dr_container" />
+
+    <ImageView
+        android:id="@+id/bottom_detail"
+        android:layout_width="360dp"
+        android:layout_height="40dp"
+        android:background="@drawable/style_detail"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

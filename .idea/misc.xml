@@ -12,6 +12,7 @@
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/dr_user.xml" value="0.149" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/ic_account.xml" value="0.152" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/ic_back.xml" value="0.149" />
+<<<<<<< HEAD
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/ic_check.xml" value="0.149" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/ic_company.xml" value="0.149" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/ic_email.xml" value="0.144" />
@@ -20,22 +21,37 @@
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/ic_games.xml" value="0.1" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/ic_help.xml" value="0.149" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/ic_key.xml" value="0.149" />
+=======
+        <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/ic_company.xml" value="0.149" />
+        <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/ic_email.xml" value="0.144" />
+        <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/ic_favorite.xml" value="0.149" />
+        <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/ic_games.xml" value="0.1" />
+>>>>>>> 31482505bcc173b187af167e03a3338e1975e8ea
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/ic_launcher_background.xml" value="0.152" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/ic_lock.xml" value="0.144" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/ic_menu.xml" value="0.145" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/ic_mode.xml" value="0.149" />
+<<<<<<< HEAD
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/ic_phone.xml" value="0.149" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/ic_service.xml" value="0.149" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/drawable/ic_store.xml" value="0.149" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/activity_change.xml" value="0.209375" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/activity_help.xml" value="0.209375" />
+=======
+        <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/activity_change.xml" value="0.209375" />
+>>>>>>> 31482505bcc173b187af167e03a3338e1975e8ea
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/activity_opening.xml" value="0.22" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/activity_register.xml" value="0.209375" />
+<<<<<<< HEAD
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/activity_seller.xml" value="0.22" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/activity_user.xml" value="0.25" />
+=======
+        <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/activity_seller.xml" value="0.209375" />
+        <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/activity_user.xml" value="0.209375" />
+>>>>>>> 31482505bcc173b187af167e03a3338e1975e8ea
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/fragment_blank.xml" value="0.209375" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/fragment_favorite.xml" value="0.209375" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/fragment_games.xml" value="0.209375" />
@@ -43,6 +59,7 @@
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/menu_home.xml" value="0.209375" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/navigation_drawer.xml" value="0.22" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/toolbar_change.xml" value="0.209375" />
+<<<<<<< HEAD
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/toolbar_help.xml" value="0.209375" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/toolbar_home.xml" value="0.209375" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/toolbar_seller.xml" value="0.209375" />
@@ -52,6 +69,39 @@
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/menu/menu_home.xml" value="0.22" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/menu/menu_user.xml" value="0.209375" />
         <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/menu/nav_itens.xml" value="0.3759765625" />
+=======
+        <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/toolbar_home.xml" value="0.209375" />
+        <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/layout/toolbar_user.xml" value="0.209375" />
+        <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/menu/menu_drawer.xml" value="0.209375" />
+        <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/menu/menu_home.xml" value="0.22" />
+        <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/menu/menu_user.xml" value="0.209375" />
+        <entry key="..\:/Users/Captain Jack/Android Project/Your Games/app/src/main/res/menu/nav_itens.xml" value="0.3759765625" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/drawable/dr_container.xml" value="0.102" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_cad_games.xml" value="0.22" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_change.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_delete_game.xml" value="0.17" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_edit_game.xml" value="0.22" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_games.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_home.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_informacoes.xml" value="0.25" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_login.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_opening.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_register.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_seller.xml" value="0.15260416666666668" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/activity_user.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment_favorite.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment_games.xml" value="0.25" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/fragment_store.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/navigation_drawer.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/single_vfavorite.xml" value="0.25" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/single_view.xml" value="0.25" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/toolbar_cadgames.xml" value="0.15104166666666666" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/toolbar_home.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/layout/toolbar_user.xml" value="0.15104166666666666" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/menu/menu_drawer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/menu/menu_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/MARIA NANCI/AndroidStudioProjects/FinalProject/app/src/main/res/menu/menu_user.xml" value="0.15104166666666666" />
+>>>>>>> 31482505bcc173b187af167e03a3338e1975e8ea
       </map>
     </option>
   </component>

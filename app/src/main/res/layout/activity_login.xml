@@ -40,7 +40,9 @@
         android:background="@drawable/dr_container"/>
 
     <com.google.android.material.textfield.TextInputLayout
+
         android:id="@+id/field_email"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:startIconDrawable="@drawable/ic_email"
@@ -55,7 +57,11 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
+
             android:id="@+id/user_email"
+
+
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
@@ -74,7 +80,10 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+
         app:layout_constraintTop_toBottomOf="@id/field_email"
+
+
         app:layout_constraintStart_toStartOf="@id/dr_container"
         app:layout_constraintEnd_toEndOf="@id/dr_container"
         app:endIconMode="password_toggle"
@@ -93,7 +102,9 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+
         android:id="@+id/button_login"
+
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:text="Entrar"
