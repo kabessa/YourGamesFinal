@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SellerActivity">
+
+    <include layout="@layout/toolbar_seller"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="@dimen/vertical"
+        android:paddingHorizontal="@dimen/horizontal"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/top_detail"
+            android:layout_width="320dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/dr_container"
+            android:background="@drawable/style_design"/>
+
+        <View
+            android:id="@+id/dr_container"
+            android:layout_width="match_parent"
+            android:layout_height="298dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/dr_container"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/field_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_company"
+            android:hint="Empresa"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toTopOf="@id/dr_container"
+            app:layout_constraintStart_toStartOf="@id/dr_container"
+            app:layout_constraintEnd_toEndOf="@id/dr_container"
+            app:shapeAppearance="@style/field"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="40">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/field_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_phone"
+            android:hint="Telefone"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toBottomOf="@id/field_company"
+            app:layout_constraintStart_toStartOf="@id/dr_container"
+            app:layout_constraintEnd_toEndOf="@id/dr_container"
+            app:shapeAppearance="@style/field"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="11">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/field_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_key"
+            android:hint="Chave"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toBottomOf="@id/field_phone"
+            app:layout_constraintStart_toStartOf="@id/dr_container"
+            app:layout_constraintEnd_toEndOf="@id/dr_container"
+            app:shapeAppearance="@style/field"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_key"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="6">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button_seller"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Registrar"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@id/field_key"
+            app:layout_constraintStart_toStartOf="@id/dr_container"
+            app:layout_constraintEnd_toEndOf="@id/dr_container"
+            android:background="@drawable/dr_button"
+            style="@style/button"/>
+
+        <ImageView
+            android:id="@+id/bottom_detail"
+            android:layout_width="320dp"
+            android:layout_height="35dp"
+            android:rotation="180"
+            android:layout_marginTop="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dr_container"
+            android:background="@drawable/style_design"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

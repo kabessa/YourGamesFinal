@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserActivity">
+
+    <include layout="@layout/toolbar_user"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="@dimen/vertical"
+        android:paddingHorizontal="@dimen/horizontal"
+        android:background="@color/black">
+
+        <View
+            android:id="@+id/dr_container"
+            android:layout_width="match_parent"
+            android:layout_height="355dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/dr_container"/>
+
+        <ImageView
+            android:id="@+id/user_photo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="335dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/dr_container"
+            android:background="@drawable/dr_user"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/save_photo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/black"
+            android:layout_marginBottom="335dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/dr_container"/>
+
+        <ImageView
+            android:id="@+id/ic_photo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toTopOf="@id/user_photo"
+            app:layout_constraintStart_toStartOf="@id/user_photo"
+            app:layout_constraintEnd_toEndOf="@id/user_photo"
+            app:layout_constraintBottom_toBottomOf="@id/user_photo"
+            android:background="@drawable/ic_photo"
+            android:backgroundTint="@color/blue_700"/>
+
+        <TextView
+            android:id="@+id/text_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- Informações (Usuário): "
+            android:textColor="@color/blue_700"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/user_photo"
+            app:layout_constraintStart_toStartOf="@id/dr_container"
+            style="@style/information"/>
+
+        <TextView
+            android:id="@+id/save_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawableTint="@color/blue_700"
+            android:text="Informação não cadastrada"
+            app:layout_constraintTop_toBottomOf="@id/text_user"
+            app:layout_constraintStart_toStartOf="@id/dr_container"
+            style="@style/information"/>
+
+        <TextView
+            android:id="@+id/save_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawableTint="@color/blue_700"
+            android:text="Informação não cadastrada"
+            app:layout_constraintTop_toBottomOf="@id/save_user"
+            app:layout_constraintStart_toStartOf="@id/dr_container"
+            style="@style/information"/>
+
+        <TextView
+            android:id="@+id/text_Seller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- Informações (Vendedor): "
+            android:textColor="@color/blue_700"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/save_email"
+            app:layout_constraintStart_toStartOf="@id/dr_container"
+            style="@style/information"/>
+
+        <TextView
+            android:id="@+id/save_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_company"
+            android:drawableTint="@color/blue_700"
+            android:text="Informação não cadastrada"
+            app:layout_constraintTop_toBottomOf="@id/text_Seller"
+            app:layout_constraintStart_toStartOf="@id/dr_container"
+            style="@style/information"/>
+
+        <TextView
+            android:id="@+id/save_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_phone"
+            android:drawableTint="@color/blue_700"
+            android:text="Informação não cadastrada"
+            app:layout_constraintTop_toBottomOf="@id/save_company"
+            app:layout_constraintStart_toStartOf="@id/dr_container"
+            style="@style/information"/>
+
+        <Button
+            android:id="@+id/button_logout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Deslogar"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@id/save_phone"
+            app:layout_constraintStart_toStartOf="@id/dr_container"
+            app:layout_constraintEnd_toEndOf="@id/dr_container"
+            android:background="@drawable/dr_button"
+            style="@style/button"/>
+
+        <ImageView
+            android:id="@+id/bottom_detail"
+            android:layout_width="320dp"
+            android:layout_height="35dp"
+            android:rotation="180"
+            android:layout_marginTop="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dr_container"
+            android:background="@drawable/style_design"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HelpActivity">
+
+    <include layout="@layout/toolbar_help"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="@dimen/vertical"
+        android:paddingHorizontal="@dimen/horizontal"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/top_detail"
+            android:layout_width="320dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/dr_container"
+            android:background="@drawable/style_design"/>
+
+        <View
+            android:id="@+id/dr_container"
+            android:layout_width="match_parent"
+            android:layout_height="298dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/dr_container"/>
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contato para atendimento"
+            android:textColor="@color/blue_700"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toTopOf="@id/dr_container"
+            app:layout_constraintStart_toStartOf="@id/dr_container"
+            app:layout_constraintEnd_toEndOf="@id/dr_container"
+            style="@style/information"/>
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/text_title"
+            app:layout_constraintStart_toStartOf="@+id/dr_container"
+            app:layout_constraintEnd_toEndOf="@+id/dr_container"
+            android:background="@color/black"/>
+
+        <TextView
+            android:id="@+id/text_email_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            android:textColor="@color/blue_700"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toBottomOf="@id/text_title"
+            app:layout_constraintStart_toStartOf="@id/dr_container"
+            style="@style/information"/>
+
+        <TextView
+            android:id="@+id/text_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="yourgames@gmail.com"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/text_email_title"
+            app:layout_constraintStart_toStartOf="@id/dr_container"
+            style="@style/information"/>
+
+        <TextView
+            android:id="@+id/text_phone_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefone:"
+            android:textColor="@color/blue_700"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/text_email"
+            app:layout_constraintStart_toStartOf="@id/dr_container"
+            style="@style/information"/>
+
+        <TextView
+            android:id="@+id/text_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(64) 994427291"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/text_phone_title"
+            app:layout_constraintStart_toStartOf="@id/dr_container"
+            style="@style/information"/>
+
+        <ImageView
+            android:id="@+id/bottom_detail"
+            android:layout_width="320dp"
+            android:layout_height="35dp"
+            android:rotation="180"
+            android:layout_marginTop="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dr_container"
+            android:background="@drawable/style_design"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
